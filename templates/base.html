@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}convert currency{% endblock %}</title>
+    
+</head>
+<body>
+    <nav style="background-color: rgb(74, 121, 74)">
+        <a href="/"><i><b>CONVERTER</b></i></a>
+        <button  type="button" data-toggle="collapse" 
+                data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" 
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+        </button>
+        <div id="navbarNavAltMarkup">
+            
+        </div>
+    </nav>
+    {% block content %} {% endblock %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Forex Converter{% endblock %}
+
+{% block content %}
+<div>
+    <div>
+        <div>
+            <div>
+                <div>Results</div>
+                <div>
+                    <h3><i>CONVERTED!</i></div>
+                    <p>
+                        The result is: {{result_symbol}}{{ result }}.
+                    </p>
+                    <a href="/" class="btn btn-outline-success">Convert More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}

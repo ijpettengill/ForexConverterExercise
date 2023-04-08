@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Forex Converter{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 card bg-light border-primary m-2 d-flex justify-content-center">
+            
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class=flashes>
+                        {% for message in messages %}
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>{{ message }}</strong>
+                    </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+
+            <div>
+                <h4><i>FOREX CONVERTER</i></h5>
+                <form action="/results" method="POST">
+                    <div>
+                        <label for="init">from_</label>
+                        <input id="first" name="first" placeholder="ex//USD" type="text"></input>
+                    </div>
+                    
+                    <div>
+                        <label for="final">to___</label>
+                        <input id="final" name="final" placeholder="ex//EUR" type="text"></input>
+                    </div>
+
+                    <div>
+                        <div>
+                            <label for="amount">Amt__</label>
+                        </div>
+                        <input type="text" name="amount" id="amount" placeholder="0.00"
+                        aria-label="Amount (to the nearest dollar)">
+                    </div>
+
+                    <button type="submit" class="btn btn-success">CONVERT</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>            
+{% endblock %}
